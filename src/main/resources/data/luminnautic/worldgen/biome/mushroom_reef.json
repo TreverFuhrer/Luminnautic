@@ -1,14 +1,14 @@
 {
   "has_precipitation": true,
-  "temperature": 0.95,
-  "downfall": 0.8,
+  "temperature": 0.9,
+  "downfall": 1.0,
   "effects": {
-    "fog_color": 9500159,
-    "water_color": 2937760,
-    "water_fog_color": 1194583,
-    "sky_color": 9500159,
+    "fog_color": 10878952,
+    "water_color": 4900008,
+    "water_fog_color": 930640,
+    "sky_color": 10878952,
     "mood_sound": {
-      "tick_delay": 5000,
+      "tick_delay": 5200,
       "offset": 2.0,
       "block_search_extent": 8,
       "sound": "minecraft:ambient.cave"
@@ -34,7 +34,8 @@
     [
       "luminnautic:coral_patch_common",
       "luminnautic:glowing_plants",
-      "minecraft:seagrass_warm"
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal"
     ],
     []
   ],
@@ -42,24 +43,19 @@
     "monster": [
       {
         "type": "minecraft:drowned",
-        "weight": 25,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:guardian",
         "weight": 8,
         "minCount": 1,
         "maxCount": 2
-      },
-      {
-        "type": "minecraft:enderman",
-        "weight": 3,
-        "minCount": 1,
-        "maxCount": 1
       }
     ],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:mooshroom",
+        "weight": 4,
+        "minCount": 2,
+        "maxCount": 4
+      }
+    ],
     "ambient": [
       {
         "type": "minecraft:bat",
@@ -68,13 +64,20 @@
         "maxCount": 8
       }
     ],
-    "axolotls": [],
+    "axolotls": [
+      {
+        "type": "minecraft:axolotl",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
     "underground_water_creature": [
       {
         "type": "minecraft:glow_squid",
-        "weight": 20,
+        "weight": 15,
         "minCount": 2,
-        "maxCount": 6
+        "maxCount": 4
       }
     ],
     "water_creature": [
@@ -83,24 +86,24 @@
         "weight": 8,
         "minCount": 1,
         "maxCount": 2
+      },
+      {
+        "type": "minecraft:dolphin",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 2
       }
     ],
     "water_ambient": [
       {
         "type": "minecraft:tropical_fish",
-        "weight": 30,
+        "weight": 20,
         "minCount": 8,
         "maxCount": 8
       },
       {
-        "type": "minecraft:pufferfish",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
         "type": "minecraft:cod",
-        "weight": 10,
+        "weight": 12,
         "minCount": 3,
         "maxCount": 6
       }

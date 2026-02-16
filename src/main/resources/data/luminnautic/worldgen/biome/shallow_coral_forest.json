@@ -1,0 +1,119 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.8,
+  "downfall": 0.9,
+  "effects": {
+    "fog_color": 7915263,
+    "water_color": 3121110,
+    "water_fog_color": 732746,
+    "sky_color": 7915263,
+    "mood_sound": {
+      "tick_delay": 6000,
+      "offset": 2.0,
+      "block_search_extent": 8,
+      "sound": "minecraft:ambient.cave"
+    }
+  },
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "luminnautic:coral_patch_common",
+      "minecraft:seagrass_warm",
+      "minecraft:kelp_warm"
+    ],
+    []
+  ],
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:drowned",
+        "weight": 15,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:turtle",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "weight": 5,
+        "minCount": 8,
+        "maxCount": 8
+      }
+    ],
+    "axolotls": [
+      {
+        "type": "minecraft:axolotl",
+        "weight": 8,
+        "minCount": 2,
+        "maxCount": 4
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:dolphin",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:cod",
+        "weight": 20,
+        "minCount": 3,
+        "maxCount": 6
+      },
+      {
+        "type": "minecraft:tropical_fish",
+        "weight": 25,
+        "minCount": 8,
+        "maxCount": 8
+      },
+      {
+        "type": "minecraft:pufferfish",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
+    "misc": []
+  },
+  "spawn_costs": {}
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:multiface_growth",
+  "config": {
+    "block": "minecraft:glow_lichen",
+    "can_be_placed_on": [
+      "minecraft:stone",
+      "minecraft:deepslate",
+      "minecraft:tuff",
+      "minecraft:calcite",
+      "minecraft:amethyst_block",
+      "minecraft:prismarine"
+    ],
+    "can_place_on_ceiling": true,
+    "can_place_on_floor": false,
+    "can_place_on_wall": true,
+    "chance_of_spreading": 0.45,
+    "search_range": 16
+  }
+}
