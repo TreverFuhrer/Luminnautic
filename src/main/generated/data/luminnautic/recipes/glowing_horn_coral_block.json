@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:horn_coral_block"
+    },
+    {
+      "item": "minecraft:glow_ink_sac"
+    }
+  ],
+  "result": {
+    "item": "luminnautic:glowing_horn_coral_block"
+  }
+}

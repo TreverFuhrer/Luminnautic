@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "luminnautic:glowing_brain_coral_block",
+    "luminnautic:glowing_bubble_coral_block",
+    "luminnautic:glowing_fire_coral_block",
+    "luminnautic:glowing_horn_coral_block",
+    "luminnautic:glowing_tube_coral_block"
+  ]
+}

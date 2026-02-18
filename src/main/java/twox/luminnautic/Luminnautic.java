@@ -2,6 +2,8 @@ package twox.luminnautic;
 
 import net.fabricmc.api.ModInitializer;
 import twox.luminnautic.command.NauticDepthsCommand;
+import twox.luminnautic.registry.ModBlocks;
+import twox.luminnautic.registry.ModItemGroups;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +18,8 @@ public class Luminnautic implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModBlocks.register();
+		ModItemGroups.register();
 		NauticDepthsCommand.register();
 		LOGGER.info("Luminnautic initialized");
 	}

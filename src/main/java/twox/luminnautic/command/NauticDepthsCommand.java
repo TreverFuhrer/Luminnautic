@@ -27,9 +27,6 @@ public final class NauticDepthsCommand {
 		Component.literal("Dimension luminnautic:nautic_depths is unavailable.")
 	);
 
-	private NauticDepthsCommand() {
-	}
-
 	public static void register() {
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(
 			literal("nauticdepths")

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "luminnautic:block/glow_coral/glowing_fire_coral_block"
+  }
+}
