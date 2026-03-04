@@ -13,11 +13,32 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CoralBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+
 import twox.luminnautic.Luminnautic;
+import twox.luminnautic.block.LuminPortalBlock;
+
 
 public final class ModBlocks {
 	private static final int GLOWING_CORAL_LUMINANCE = 15;
 	private static final Map<String, Block> REGISTERED_BLOCKS = new LinkedHashMap<>();
+
+	// Portal block
+	public static final Block LUMIN_PORTAL_BLOCK = registerBlock(
+		"lumin_portal_block",
+		() -> new LuminPortalBlock(BlockBehaviour.Properties.of()
+        .strength(3.0f, 3.0f)
+        .lightLevel(state -> 15)
+        .noOcclusion())
+	);
+
+	public static final Block LUMIN_PORTAL = registerBlock(
+  		  "lumin_portal",
+		() -> new Block(BlockBehaviour.Properties.of()
+		.strength(0f)
+		.noOcclusion()
+		.lightLevel(state -> 10)
+		)
+	);
 
 	// Public registry API.
 	public static void register() {
@@ -26,7 +47,7 @@ public final class ModBlocks {
 	}
 
 	public static List<Block> all() {
-		return GlowingCoralBlocks.allBlocks();
+		return List.copyOf(REGISTERED_BLOCKS.values());
 	}
 
 	public static List<GlowingCoralBlocks.GlowingCoralBlock> glowingCorals() {

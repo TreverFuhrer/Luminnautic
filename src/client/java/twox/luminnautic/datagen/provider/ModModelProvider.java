@@ -7,6 +7,7 @@ import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.data.models.model.TexturedModel;
 import twox.luminnautic.registry.GlowingCoralBlocks;
+import twox.luminnautic.registry.ModBlocks;
 
 public class ModModelProvider extends FabricModelProvider {
 	public ModModelProvider(FabricDataOutput output) {

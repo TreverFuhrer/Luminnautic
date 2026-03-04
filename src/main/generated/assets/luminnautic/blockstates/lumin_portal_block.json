@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "luminnautic:block/lumin_portal_block"
+    }
+  }
+}
