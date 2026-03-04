@@ -1016,3 +1016,71 @@ WARNING: Unmatched cancel notification for request id 1499
 2026.02.18 03:02:36 INFO  no build target found for /Users/tokitoki/Desktop/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/registry/ModBlocks.java. Using fallback presentation compiler.
 2026.02.18 03:12:54 INFO  no build target found for /Users/tokitoki/Desktop/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/registry/ModBlocks.java. Using fallback presentation compiler.
 2026.02.18 03:23:02 INFO  no build target found for /Users/tokitoki/Desktop/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/registry/ModBlocks.java. Using fallback presentation compiler.
+2026.02.18 03:29:38 INFO  no build target found for /Users/tokitoki/Desktop/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/registry/ModBlocks.java. Using fallback presentation compiler.
+Feb 18, 2026 3:29:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1633
+2026.02.19 11:35:59 INFO  Started: Metals version 1.6.5 in folders '/Users/tokitoki/Desktop/VSCodeProjects/Luminnautic' for client Visual Studio Code 1.109.4.
+2026.02.19 11:35:59 INFO  Memory monitor started
+2026.02.19 11:36:04 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.19 11:36:04 INFO  no build target found for /Users/tokitoki/Desktop/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/registry/ModBlocks.java. Using fallback presentation compiler.
+2026.02.19 11:37:32 INFO  no build target found for /Users/tokitoki/Desktop/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/registry/ModBlocks.java. Using fallback presentation compiler.
+2026.02.19 11:37:36 INFO  Shutting down server
+2026.02.19 11:37:36 INFO  Memory monitor stopped
+2026.02.19 11:37:36 INFO  shutting down Metals
+2026.02.19 11:37:36 INFO  Exiting server
+2026.03.03 19:23:24 INFO  Started: Metals version 1.6.6 in folders '/Users/tokitoki/VSCodeProjects/Luminnautic' for client Visual Studio Code 1.109.5.
+2026.03.03 19:23:24 INFO  Memory monitor started
+2026.03.03 19:23:24 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.03.03 19:23:25 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/client/java/twox/luminnautic/datagen/provider/ModModelProvider.java. Using fallback presentation compiler.
+2026.03.03 19:23:25 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/client/java/twox/luminnautic/datagen/provider/ModModelProvider.java. Using fallback presentation compiler.
+2026.03.03 19:23:33 INFO  running '/Users/tokitoki/VSCodeProjects/Luminnautic/gradlew --stacktrace --console=plain --init-script /var/folders/lf/fpzn7gzd1p9934459b94vz5w0000gn/T/metals15285948536558267170/init-script.gradle bloopInstall'
+2026.03.03 19:23:33 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/client/java/twox/luminnautic/datagen/provider/ModModelProvider.java. Using fallback presentation compiler.
+2026.03.03 19:23:37 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/client/java/twox/luminnautic/datagen/provider/ModModelProvider.java. Using fallback presentation compiler.
+2026.03.03 19:23:38 INFO  
+2026.03.03 19:23:38 INFO  > Configure project :
+2026.03.03 19:23:38 INFO  Fabric Loom: 1.15.4
+2026.03.03 19:23:38 INFO  
+2026.03.03 19:23:38 INFO  > Task :configureBloopInstall
+2026.03.03 19:23:41 INFO  > Task :bloopInstall
+2026.03.03 19:23:41 INFO  
+2026.03.03 19:23:41 INFO  [Incubating] Problems report is available at: file:///Users/tokitoki/VSCodeProjects/Luminnautic/build/reports/problems/problems-report.html
+2026.03.03 19:23:41 INFO  
+2026.03.03 19:23:41 INFO  Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+2026.03.03 19:23:41 INFO  
+2026.03.03 19:23:41 INFO  You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026.03.03 19:23:41 INFO  
+2026.03.03 19:23:41 INFO  For more on this, please refer to https://docs.gradle.org/9.3.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026.03.03 19:23:41 INFO  
+2026.03.03 19:23:41 INFO  BUILD SUCCESSFUL in 7s
+2026.03.03 19:23:41 INFO  2 actionable tasks: 2 executed
+2026.03.03 19:23:41 INFO  time: ran 'gradle bloopInstall' in 7.97s
+2026.03.03 19:23:41 INFO  Attempting to connect to the build server...
+2026.03.03 19:23:41 INFO  No running Bloop server found, starting one.
+2026.03.03 19:23:46 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/block/LuminPortal.java. Using fallback presentation compiler.
+2026.03.03 19:23:46 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/block/LuminPortal.java. Using fallback presentation compiler.
+2026.03.03 19:23:46 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/block/LuminPortal.java. Using fallback presentation compiler.
+2026.03.03 19:23:48 INFO  Starting compilation server
+2026.03.03 19:23:49 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/block/LuminPortal.java. Using fallback presentation compiler.
+2026.03.03 19:23:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tokitoki/VSCodeProjects/Luminnautic/.metals/bsp.trace.json or /Users/tokitoki/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.03 19:23:50 INFO  time: Connected to build server in 8.71s
+2026.03.03 19:23:49 INFO  Connected to Build server: Bloop v2.0.19
+2026.03.03 19:23:50 INFO  time: Imported build in 0.22s
+2026.03.03 19:23:58 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.03.03 19:24:18 INFO  time: indexed workspace in 28s
+2026.03.03 19:24:19 INFO  compiling luminnautic (9 java sources)
+2026.03.03 19:24:21 INFO  Note: Some input files use or override a deprecated API.
+2026.03.03 19:24:21 INFO  Note: Recompile with -Xlint:deprecation for details.
+2026.03.03 19:24:22 INFO  compiling luminnautic-client (9 java sources)
+2026.03.03 19:24:22 INFO  time: compiled Luminnautic in 3.11s
+2026.03.03 19:27:27 INFO  compiling luminnautic (9 java sources)
+2026.03.03 19:27:29 WARN  javac exited with exit code 1
+2026.03.03 19:27:29 INFO  time: compiled Luminnautic in 2.02s
+2026.03.03 19:27:31 INFO  compiling luminnautic (9 java sources)
+2026.03.03 19:27:33 WARN  javac exited with exit code 1
+2026.03.03 19:27:33 INFO  time: compiled Luminnautic in 1.86s
+2026.03.03 19:27:48 INFO  compiling luminnautic (9 java sources)
+2026.03.03 19:27:50 INFO  Note: Some input files use or override a deprecated API.
+2026.03.03 19:27:50 INFO  Note: Recompile with -Xlint:deprecation for details.
+2026.03.03 19:27:50 INFO  time: compiled Luminnautic in 2.36s
+Mar 03, 2026 7:33:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

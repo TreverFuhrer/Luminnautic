@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.CoralBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import twox.luminnautic.Luminnautic;
+import twox.luminnautic.block.LuminPortal;
 import twox.luminnautic.block.LuminPortalBlock;
 
 
@@ -33,8 +34,9 @@ public final class ModBlocks {
 
 	public static final Block LUMIN_PORTAL = registerBlock(
   		  "lumin_portal",
-		() -> new Block(BlockBehaviour.Properties.of()
+		() -> new LuminPortal(BlockBehaviour.Properties.of()
 		.strength(0f)
+		.noCollission()
 		.noOcclusion()
 		.lightLevel(state -> 10)
 		)

@@ -1,8 +1,15 @@
 package twox.luminnautic.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -14,10 +21,15 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.util.RandomSource;
+import twox.luminnautic.Luminnautic;
 
 public class LuminPortal extends Block implements SimpleWaterloggedBlock {
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    private static final ResourceKey<Level> NAUTIC_DEPTHS_WORLD = ResourceKey.create(
+        Registries.DIMENSION,
+        new ResourceLocation(Luminnautic.MOD_ID, "nautic_depths")
+    );
 
     public LuminPortal(BlockBehaviour.Properties properties) {
         super(properties);
@@ -40,8 +52,42 @@ public class LuminPortal extends Block implements SimpleWaterloggedBlock {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-@Override
-public void animateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
+    @Override
+    public void entityInside(BlockState state, Level world, BlockPos pos, Entity entity) {
+        if (world.isClientSide || !(entity instanceof ServerPlayer player)) {
+            return;
+        }
+        if (player.isOnPortalCooldown() || !player.canChangeDimensions()) {
+            return;
+        }
+
+        MinecraftServer server = world.getServer();
+        if (server == null) {
+            return;
+        }
+
+        ResourceKey<Level> targetKey = world.dimension().equals(NAUTIC_DEPTHS_WORLD)
+            ? Level.OVERWORLD
+            : NAUTIC_DEPTHS_WORLD;
+        ServerLevel target = server.getLevel(targetKey);
+        if (target == null) {
+            return;
+        }
+
+        BlockPos spawn = target.getSharedSpawnPos();
+        player.setPortalCooldown();
+        player.teleportTo(
+            target,
+            spawn.getX() + 0.5,
+            spawn.getY() + 1.0,
+            spawn.getZ() + 0.5,
+            player.getYRot(),
+            player.getXRot()
+        );
+    }
+
+    @Override
+    public void animateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
         if(random.nextInt(3) == 0) { // more particles for shimmer
             world.addParticle(ParticleTypes.END_ROD,
                 pos.getX() + random.nextDouble(),
