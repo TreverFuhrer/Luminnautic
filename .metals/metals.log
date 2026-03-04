@@ -1084,3 +1084,36 @@ WARNING: Unmatched cancel notification for request id 1633
 2026.03.03 19:27:50 INFO  time: compiled Luminnautic in 2.36s
 Mar 03, 2026 7:33:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2026.03.03 19:48:29 INFO  compiling luminnautic-client (9 java sources)
+2026.03.03 22:10:03 INFO  Shutting down server
+2026.03.03 22:10:03 INFO  Memory monitor stopped
+2026.03.03 22:10:03 INFO  shutting down Metals
+2026.03.03 22:10:04 INFO  Shut down connection with build server.
+2026.03.03 22:10:04 INFO  Cancelling compilation on Bloop server
+2026.03.03 22:10:04 INFO  Cancelling compilation on Bloop server
+2026.03.03 22:10:38 INFO  Started: Metals version 1.6.6 in folders '/Users/tokitoki/VSCodeProjects/Luminnautic' for client Visual Studio Code 1.109.5.
+2026.03.03 22:10:38 INFO  Memory monitor started
+2026.03.03 22:10:42 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+Mar 03, 2026 10:10:43 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.03.03 22:10:43 INFO  Attempting to connect to the build server...
+2026.03.03 22:10:43 INFO  no build target found for /Users/tokitoki/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/block/LuminPortalBlock.java. Using fallback presentation compiler.
+2026.03.03 22:10:43 INFO  No running Bloop server found, starting one.
+2026.03.03 22:10:49 INFO  Starting compilation server
+2026.03.03 22:10:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/tokitoki/VSCodeProjects/Luminnautic/.metals/bsp.trace.json or /Users/tokitoki/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.03.03 22:10:54 INFO  time: Connected to build server in 11s
+2026.03.03 22:10:54 INFO  Connected to Build server: Bloop v2.0.19
+2026.03.03 22:10:55 INFO  time: Imported build in 0.58s
+2026.03.03 22:11:06 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.03.03 22:11:09 INFO  time: indexed workspace in 13s
+2026.03.03 22:11:10 INFO  compiling luminnautic (2 java sources)
+2026.03.03 22:11:12 INFO  Note: /Users/tokitoki/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/block/LuminPortalBlock.java uses or overrides a deprecated API.
+2026.03.03 22:11:12 INFO  Note: Recompile with -Xlint:deprecation for details.
+2026.03.03 22:11:12 INFO  time: compiled Luminnautic in 2.05s
+2026.03.03 22:11:12 INFO  compiling luminnautic (3 java sources)
+2026.03.03 22:11:14 INFO  Note: /Users/tokitoki/VSCodeProjects/Luminnautic/src/main/java/twox/luminnautic/block/LuminPortalBlock.java uses or overrides a deprecated API.
+2026.03.03 22:11:14 INFO  Note: Recompile with -Xlint:deprecation for details.
+2026.03.03 22:11:14 INFO  time: compiled Luminnautic in 1.87s
+2026.03.03 22:11:14 INFO  compiling luminnautic-client (9 java sources)
+Mar 03, 2026 10:12:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

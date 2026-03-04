@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
@@ -57,15 +58,10 @@ public class LuminPortalBlock extends Block implements SimpleWaterloggedBlock {
             return InteractionResult.PASS;
         }
 
-        BlockPos center = findPortalCenter(world, pos);
-        if (center == null) {
-            return InteractionResult.FAIL;
+        if (tryActivatePortal(world, pos)) {
+            return InteractionResult.sidedSuccess(world.isClientSide);
         }
-
-        if (!world.isClientSide) {
-            activatePortal(world, center);
-        }
-        return InteractionResult.sidedSuccess(world.isClientSide);
+        return InteractionResult.PASS;
     }
 
     @Override
@@ -79,19 +75,50 @@ public class LuminPortalBlock extends Block implements SimpleWaterloggedBlock {
         }
     }
 
-    private BlockPos findPortalCenter(Level world, BlockPos clickedFrame) {
-        for (int x = -2; x <= 2; x++) {
-            for (int z = -2; z <= 2; z++) {
-                BlockPos candidateCenter = clickedFrame.offset(x, 0, z);
-                if (isFrameValid(world, candidateCenter)) {
-                    return candidateCenter;
+    public static boolean tryActivatePortal(Level world, BlockPos activationPos) {
+        BlockPos center = findPortalCenter(world, activationPos);
+        if (center == null) {
+            return false;
+        }
+
+        if (!world.isClientSide) {
+            activatePortal(world, center);
+        }
+        return true;
+    }
+
+    private static BlockPos findPortalCenter(Level world, BlockPos activationPos) {
+        for (int y = -1; y <= 1; y++) {
+            for (int x = -2; x <= 2; x++) {
+                for (int z = -2; z <= 2; z++) {
+                    BlockPos candidateCenter = activationPos.offset(x, y, z);
+                    if (isFrameValid(world, candidateCenter) && isFullyUnderwater(world, candidateCenter)) {
+                        return candidateCenter;
+                    }
                 }
             }
         }
         return null;
     }
 
-    private boolean isFrameValid(Level world, BlockPos center) {
+    private static boolean isFullyUnderwater(Level world, BlockPos center) {
+        for (int x = -2; x <= 2; x++) {
+            for (int z = -2; z <= 2; z++) {
+                BlockPos portalArea = center.offset(x, 0, z);
+                BlockPos abovePortalArea = portalArea.above();
+                if (!isWater(world, portalArea) || !isWater(world, abovePortalArea)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private static boolean isWater(Level world, BlockPos pos) {
+        return world.getFluidState(pos).is(FluidTags.WATER);
+    }
+
+    private static boolean isFrameValid(Level world, BlockPos center) {
         // End-portal style frame: 5x5 outer square, 3x3 inner portal, 12 frame blocks (corners ignored)
         int[] dx = {-2, -1, 0, 1, 2};
         int[] dz = {-2, -1, 0, 1, 2};
@@ -111,7 +138,7 @@ public class LuminPortalBlock extends Block implements SimpleWaterloggedBlock {
                 }
 
                 BlockState frameState = world.getBlockState(check);
-                if (frameState.getBlock() != this) {
+                if (frameState.getBlock() != ModBlocks.LUMIN_PORTAL_BLOCK) {
                     return false;
                 }
             }
@@ -120,7 +147,7 @@ public class LuminPortalBlock extends Block implements SimpleWaterloggedBlock {
         return true;
     }
 
-    private void activatePortal(Level world, BlockPos center) {
+    private static void activatePortal(Level world, BlockPos center) {
         for (int x = -1; x <= 1; x++) {
             for (int z = -1; z <= 1; z++) {
                 BlockPos pos = center.offset(x, 0, z);

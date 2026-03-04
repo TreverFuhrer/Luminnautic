@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "luminnautic:block/lumin_portal"
+    },
+    "waterlogged=true": {
+      "model": "luminnautic:block/lumin_portal"
+    }
+  }
+}

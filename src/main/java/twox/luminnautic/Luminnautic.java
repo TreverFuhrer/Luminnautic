@@ -1,6 +1,10 @@
 package twox.luminnautic;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.Items;
+import twox.luminnautic.block.LuminPortalBlock;
 import twox.luminnautic.command.NauticDepthsCommand;
 import twox.luminnautic.registry.ModBlocks;
 import twox.luminnautic.registry.ModItemGroups;
@@ -21,6 +25,14 @@ public class Luminnautic implements ModInitializer {
 		ModBlocks.register();
 		ModItemGroups.register();
 		NauticDepthsCommand.register();
+		UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
+			if (player.getItemInHand(hand).getItem() != Items.BRICK) {
+				return InteractionResult.PASS;
+			}
+			return LuminPortalBlock.tryActivatePortal(world, hitResult.getBlockPos())
+				? InteractionResult.SUCCESS
+				: InteractionResult.PASS;
+		});
 		LOGGER.info("Luminnautic initialized");
 	}
 }
